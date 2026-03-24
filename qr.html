@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Pass — Eventoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="qr-body">
+
+    <div class="qr-container">
+        <div class="qr-success-icon">✅</div>
+        <h2>Payment Successful!</h2>
+        <p class="qr-event-name" id="qrEventName">Your Entry Pass</p>
+
+        <img id="qr-image" src="" alt="QR Code" width="200" height="200">
+
+        <p class="qr-hint">📲 Show this QR code at the event entry gate.<br>Screenshot or save it for offline access.</p>
+
+        <div class="group-chat-section">
+            <p>Connect with other participants</p>
+            <button onclick="joinChat()" class="chat-btn">💬 Join Event Group Chat</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventoo — Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body">
+
+    <!-- Sticky Nav -->
+    <header class="top-bar">
+        <h1 class="logo">Eventoo</h1>
+        <div class="nav-actions">
+            <button class="btn btn-secondary" onclick="openCalendar()">📅 Calendar</button>
+            <div class="user-avatar" id="userAvatar" title="Logged in">U</div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="dashboard-hero">
+        <p class="hero-greeting" id="heroGreeting">Good day! 👋</p>
+        <p class="hero-sub">Discover amazing events happening at campuses near you</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-section">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="universitySearch" placeholder="Search by university or event…">
+        </div>
+        <div class="genre-chips">
+            <button class="chip active" data-genre="">All Events</button>
+            <button class="chip" data-genre="tech">💻 Tech</button>
+            <button class="chip" data-genre="cultural">🎭 Cultural</button>
+            <button class="chip" data-genre="sports">🏆 Sports</button>
+            <button class="chip" data-genre="business">🚀 Business</button>
+        </div>
+    </div>
+
+    <!-- Events Feed -->
+    <div class="feed-section">
+        <p class="section-title">Upcoming Events</p>
+        <div class="events-grid" id="event-feed"></div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

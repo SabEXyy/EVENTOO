@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout — Eventoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="payment-body">
+
+    <div class="payment-header">
+        <button class="btn-back" onclick="history.back()">← Back</button>
+        <h2>Checkout</h2>
+    </div>
+
+    <div class="payment-container">
+
+        <!-- Order Summary -->
+        <div class="payment-summary">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+                <span>Event</span>
+                <span id="eventName" style="font-weight:600; color: var(--text-primary);">—</span>
+            </div>
+            <div class="summary-row">
+                <span>Tickets</span>
+                <div class="ticket-counter">
+                    <button class="counter-btn" onclick="changeTickets(-1)">−</button>
+                    <span id="ticketCountDisplay">1</span>
+                    <button class="counter-btn" onclick="changeTickets(1)">+</button>
+                </div>
+            </div>
+            <div class="summary-row">
+                <span>Total Amount</span>
+                <span id="totalPrice" style="font-weight:700;">₹0</span>
+            </div>
+        </div>
+
+        <!-- Payment Method -->
+        <p class="section-label">Payment Method</p>
+        <div class="payment-methods">
+            <label class="method-card selected" id="cardMethod">
+                <input type="radio" name="paymentMethod" value="card" checked>
+                <span class="method-icon">💳</span>
+                <span class="method-name">Debit / Credit Card</span>
+            </label>
+            <label class="method-card" id="upiMethod">
+                <input type="radio" name="paymentMethod" value="upi">
+                <span class="method-icon">📱</span>
+                <span class="method-name">UPI</span>
+            </label>
+        </div>
+
+        <!-- Card Form -->
+        <div id="cardDetails" class="payment-form">
+            <input type="text" id="cardNumber" placeholder="Card Number (16 digits)" maxlength="19">
+            <div class="card-row">
+                <input type="text" placeholder="MM / YY" maxlength="7">
+                <input type="text" placeholder="CVV" maxlength="3">
+            </div>
+            <input type="text" placeholder="Cardholder Name">
+        </div>
+
+        <!-- UPI Form -->
+        <div id="upiDetails" class="payment-form" style="display:none;">
+            <input type="text" placeholder="Enter UPI ID  (e.g. name@okaxis)">
+        </div>
+
+        <button id="payNowBtn" class="pay-btn" type="button" onclick="completePayment()">
+            🔒 Pay Now
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

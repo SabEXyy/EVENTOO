@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Chat — Eventoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="chat-body">
+
+    <div class="chat-container">
+
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <div class="chat-header-avatar">💬</div>
+            <div class="chat-header-info">
+                <h2 id="chatEventName">Event Group Chat</h2>
+                <p><span class="online-dot"></span>Live · Participants online</p>
+            </div>
+            <button class="chat-back-btn" onclick="history.back()">← Back</button>
+        </div>
+
+        <!-- Messages -->
+        <div id="chatMessages" class="chat-messages"></div>
+
+        <!-- Input -->
+        <div class="chat-input-section">
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Type a message…"
+                onkeypress="if(event.key==='Enter') sendMessage()"
+            >
+            <button class="chat-send-btn" onclick="sendMessage()" title="Send">➤</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

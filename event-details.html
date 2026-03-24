@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details — Eventoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="details-body">
+
+    <!-- Gradient Hero -->
+    <div class="details-hero">
+        <button class="btn-back-glass" onclick="history.back()" style="margin-bottom:18px;">← Back</button>
+        <span class="details-hero-icon" id="event-icon">🎉</span>
+        <h1 id="event-title">Loading…</h1>
+        <p id="event-description"></p>
+    </div>
+
+    <!-- Content Card -->
+    <div class="details-content">
+        <div class="details-card">
+            <div class="details-grid">
+                <div class="detail-item">
+                    <h4>📍 Venue</h4>
+                    <p id="event-venue">—</p>
+                </div>
+                <div class="detail-item">
+                    <h4>📅 Date</h4>
+                    <p id="event-date">—</p>
+                </div>
+                <div class="detail-item">
+                    <h4>💰 Entry Fee</h4>
+                    <p id="event-price">—</p>
+                </div>
+                <div class="detail-item">
+                    <h4>👥 Registered</h4>
+                    <p id="event-participants">—</p>
+                </div>
+            </div>
+
+            <div class="details-actions">
+                <button class="btn btn-primary" onclick="goToPayment()">🎟️ Get Tickets</button>
+                <button class="btn btn-secondary" onclick="joinChat()">💬 Join Group Chat</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

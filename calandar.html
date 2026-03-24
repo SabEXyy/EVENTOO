@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar — Eventoo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="calendar-body">
+
+    <div class="calendar-wrapper">
+
+        <!-- Calendar Header -->
+        <div class="calendar-top">
+            <div class="calendar-title">
+                <h1>📅 Event Calendar</h1>
+                <p>Browse events by date — highlighted days have events</p>
+            </div>
+            <div class="calendar-controls">
+                <select id="monthSelect" onchange="generateCalendar()">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <button class="btn-back" onclick="goBack()">← Dashboard</button>
+            </div>
+        </div>
+
+        <!-- Calendar Grid -->
+        <div class="calendar-content">
+            <!-- Day Labels -->
+            <div class="day-labels">
+                <div class="day-label">Sun</div>
+                <div class="day-label">Mon</div>
+                <div class="day-label">Tue</div>
+                <div class="day-label">Wed</div>
+                <div class="day-label">Thu</div>
+                <div class="day-label">Fri</div>
+                <div class="day-label">Sat</div>
+            </div>
+
+            <div class="calendar-grid" id="calendarGrid"></div>
+
+            <!-- Legend -->
+            <div class="calendar-legend">
+                <div class="legend-item">
+                    <div class="legend-dot" style="background:#eef2ff; border:2px solid #6366f1;"></div>
+                    <span>Has event — click to view</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background: linear-gradient(135deg,#6366f1,#8b5cf6);"></div>
+                    <span>Today</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

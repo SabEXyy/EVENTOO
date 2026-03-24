@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventoo — Discover Campus Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+    <div class="login-brand">
+        <h1>Eventoo</h1>
+        <p>Connect. Participate. Celebrate.</p>
+    </div>
+
+    <div class="login-card">
+        <h2>Welcome Back 👋</h2>
+        <form onsubmit="event.preventDefault(); login();">
+            <div class="input-group">
+                <span class="input-icon">👤</span>
+                <input type="text" id="name" placeholder="Your full name" required autocomplete="name">
+            </div>
+            <div class="input-group">
+                <span class="input-icon">✉️</span>
+                <input type="email" id="email" placeholder="your@email.com" required autocomplete="email">
+            </div>
+            <button type="submit" class="btn-login">Get Started →</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
